@@ -46,5 +46,5 @@ public class Mahasiswa20 {
         } else {
             return "Kinerja kurang";
         }
-    }
+    }       
 }
