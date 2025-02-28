@@ -2,7 +2,7 @@ import java.util.Scanner;
 public class MatakuliahDemo20 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        Matakuliah20[] arrayMatakuliah20 = new Matakuliah20[3];
+        Matakuliah20[] arrayOfMatakuliah20 = new Matakuliah20[3];
         String kode, nama, dummy;
         int sks, jumlahJam;
 
@@ -20,9 +20,18 @@ public class MatakuliahDemo20 {
             jumlahJam = Integer.parseInt(dummy);
             System.out.println("------------------------------------");
 
-            arrayMatakuliah20[i] = new Matakuliah20(kode, nama, sks, jumlahJam);
+            arrayOfMatakuliah20[i] = new Matakuliah20(kode, nama, sks, jumlahJam);
 
             
+            
+        }
+        for(int i=0; i<3; i++) {
+            System.out.println("Data Matakuliah ke-" + (i + 1));
+            System.out.println("Kode\t: "+ arrayOfMatakuliah20[i].kode);
+            System.out.println("Kode\t: "+ arrayOfMatakuliah20[i].nama);
+            System.out.println("Kode\t: "+ arrayOfMatakuliah20[i].sks);
+            System.out.println("Kode\t: "+ arrayOfMatakuliah20[i].jumlahJam);
+            System.out.println("----------------------------------------------");
 
 
         }
