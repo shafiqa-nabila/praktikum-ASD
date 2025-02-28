@@ -21,6 +21,8 @@ public class MatakuliahDemo20 {
             System.out.println("------------------------------------");
 
             arrayOfMatakuliah20[i] = new Matakuliah20(kode, nama, sks, jumlahJam);
+            System.out.println("------------------------------");
+            arrayOfMatakuliah20[i].tambahData20(kode, nama, sks, jumlahJam);
 
             
             
@@ -34,6 +36,11 @@ public class MatakuliahDemo20 {
             System.out.println("----------------------------------------------");
 
 
+        }
+
+        for(int i=0; i < 3; i++) {
+            System.out.println("Masukkan Data Matakuliah ke-" + (i + 1));
+            arrayOfMatakuliah20[i].cetakInfo();
         }
     }
 }
