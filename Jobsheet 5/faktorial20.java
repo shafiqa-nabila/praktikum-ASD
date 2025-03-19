@@ -2,8 +2,10 @@ public class faktorial20 {
 
     int faktorialBF(int n){
         int faktor =1;
-        for(int i=1; i<=n; i++){
-            faktor = faktor * i;
+        int i =1;
+        while (i <= n) {
+            faktor *= i;
+            i++;
         }
         return faktor;
     }
