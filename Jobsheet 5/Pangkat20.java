@@ -6,6 +6,14 @@ public class Pangkat20 {
         this.pangkat = p;
     }
 
+    public int pangkatBF() {
+        int hasil = 1;
+        for (int i = 0; i < pangkat; i++) {
+            hasil *= nilai;
+        }
+        return hasil;
+    }
+
     public int pangkatBF(int a, int n) {
         int hasil = 1;
         for (int i = 0; i < n; i++) {
