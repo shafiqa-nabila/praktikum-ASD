@@ -2,7 +2,7 @@ import java.util.Scanner;
 public class MahasiswaDemo {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        StackTugasMahasiswa20 stack = new StackTugasMahasiswa20(5);
+        StackTugasMahasiswa stack = new StackTugasMahasiswa(5);
         int pilih;
         do {
             System.out.println("\n Menu");
@@ -54,7 +54,20 @@ public class MahasiswaDemo {
                 break;
             default:
                 System.out.println("Pilihan tidak valid.");
+            case 6:
+                Mahasiswa20 bawah = stack.bottom();
+                if (bawah != null) {
+                    System.out.println("Tugas terbawah:");
+                    System.out.println(bawah.nama + " - " + bawah.nim);
+                } else {
+                    System.out.println("Stack masih kosong!");
+                }
+                break;
+            case 7:
+                System.out.println("Jumlah tugas yang sudah dikumpulkan: " + stack.jumlahTugas());
+                break;
             }
         } while (pilih >= 1 && pilih <= 4);
+        sc.close();
     }
 }
