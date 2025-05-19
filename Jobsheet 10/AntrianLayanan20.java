@@ -83,6 +83,52 @@ public class AntrianLayanan20 {
         return data[rear]; // Mengembalikan elemen di posisi belakang
     }
 
+    void enqueue(Mahasiswa20 mhs) {
+        if (IsFull()) {
+            System.out.println("Antrian penuh!");
+            return;
+        }
+        if (IsEmpty()) {
+            front = 0;
+        }
+        rear = (rear + 1) % max;
+        data[rear] = mhs;
+        size++;
+    }
+
+    Mahasiswa20 dequeue() {
+        if (IsEmpty()) {
+            System.out.println("Antrian kosong!");
+            return null;
+        }
+        Mahasiswa20 mhs = data[front];
+        front = (front + 1) % max;
+        size--;
+        if (IsEmpty()) {
+            front = -1;
+            rear = -1;
+        }
+        return mhs;
+    }
+
+    void print() {
+        if (IsEmpty()) {
+            System.out.println("Antrian kosong!");
+            return;
+        }
+        System.out.println("Daftar Antrian:");
+        for (int i = 0; i < size; i++) {
+            int index = (front + i) % max;
+            data[index].tampilkanData();
+        }
+    }
+
+    void clear() {
+        front = -1;
+        rear = -1;
+        size = 0;
+    }
+
     public int getJumlahAntrian() {
         return size;
     }
